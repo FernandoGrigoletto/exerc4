@@ -1,18 +1,19 @@
 import express from 'express';
-import disciplinaRoutes from './disciplinaRoutes.js'; // Não esqueça o .js no final!
+import disciplinaRoutes from './routes/disciplinaRoutes.js'; // ⚠️ IMPORTANTE: Adicione o .js no final do caminho
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
 
-// Rota principal para testar
+// Rota principal para teste rápido
 app.get('/', (req, res) => {
-    res.send('API de Disciplinas Rodando!');
+    res.send('API de Disciplinas rodando com ES Modules!');
 });
 
 app.use('/disciplinas', disciplinaRoutes);
 
 app.listen(PORT, () => {
-    console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
+    console.log(`🚀 Servidor rodando com sucesso na porta ${PORT}`);
+    console.log(`Acesse: http://localhost:${PORT}/disciplinas`);
 });
