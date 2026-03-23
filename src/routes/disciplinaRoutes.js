@@ -1,10 +1,10 @@
 import express from 'express';
-import * as disciplinaController from '../controllers/disciplinaController.js'; 
+// ⚠️ IMPORTANTE: Sempre coloque a extensão .js no final do caminho dos seus arquivos
+import * as disciplinaController from '../controllers/disciplinaController.js';
 
 const router = express.Router();
 
-// Lembre-se: no Controller, a função deve se chamar 'listar' ou 'index'
-// O nome 'listen' geralmente é usado apenas para o servidor (app.listen)
-router.get('/', disciplinaController.listar); 
+// Aqui chamamos a função 'listen' que está dentro do seu Controller
+router.get('/', disciplinaController.listen);
 
 export default router;
