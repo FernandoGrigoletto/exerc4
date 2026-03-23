@@ -1,7 +1,10 @@
-const express = require('express');
+import express from 'express';
+import * as disciplinaController from '../controllers/disciplinaController.js'; 
+
 const router = express.Router();
-const disciplinaController = require('../controllers/disciplinaController');
 
-router.get('/', disciplinaController.listen);
+// Lembre-se: no Controller, a função deve se chamar 'listar' ou 'index'
+// O nome 'listen' geralmente é usado apenas para o servidor (app.listen)
+router.get('/', disciplinaController.listar); 
 
-module.exports = router;
+export default router;
