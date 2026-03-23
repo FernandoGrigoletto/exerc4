@@ -1,4 +1,4 @@
-const mysql = require('mysql2/promise');
+import mysql from 'mysql2/promise';
 
 const pool = mysql.createPool({
     host: '147.15.78.7',
@@ -10,4 +10,5 @@ const pool = mysql.createPool({
     queueLimit: 0
 });
 
-module.exports = pool;
+// Exportação moderna para ES Modules
+export default pool;
